@@ -1,0 +1,313 @@
+@import "main.less";
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-device-width: 723px) { 
+    
+    /* ======= Header Section ======= */
+    .header { 
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            
+            .login-desk {
+                display: none;
+            }
+            
+        }
+        
+        .main-nav {
+            position: relative;
+            
+            button {
+                margin-right: 0;  
+                color: @color;
+            }
+            
+            .navbar-header {
+                display: block;
+                width: 100%;
+            }
+                      
+            .navbar-collapse {
+                background: rgba(38, 49, 54, 0.95);
+                -webkit-box-shadow: 0px 4px 5px 0px rgba(2, 3, 3, 0.15);
+                -moz-box-shadow: 0px 4px 5px 0px rgba(2, 3, 3, 0.15);
+                box-shadow: 0px 4px 5px 0px rgba(2, 3, 3, 0.15);
+                border-radius: 5px;
+                width: 320px;
+                float: right;
+                margin-top: 27px;
+                padding: 0px;
+                
+                &.collapse {
+                    display: none !important;
+                }
+                
+                &.collapse.in {
+                    display: block !important;
+                }
+                
+                .navbar-nav {
+                    margin: 0;
+                    padding: 14px 0 40px;
+                }
+                
+                .nav-item {
+                    width: 100%;
+                    display: block;
+                    height: 41px;
+                    margin: 0px;
+                    
+                        &.active{
+                            a {
+                                border-bottom: none;
+                                background: @color-green;
+                                color: #263136;
+                            }
+                        }
+                    
+                    a {
+                        font-size: 16px;
+                        line-height: 41px;
+                        height: 41px;
+                        display: block;
+                        margin: 0px;
+                        padding: 0px;
+                        text-align: center;
+                        border-bottom: none;
+                        
+                        -webkit-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+                        -moz-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+                        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+            
+                        &:hover, &:focus{
+                            border-bottom: none;
+                            background: @color-green;
+                            color: #263136;
+                        }
+                    }
+                    
+                    &.login-mobile {
+                        display: block;
+                        height: 37px;
+                        
+                        .btn {
+                            width: 269px;
+                            left: 28px;
+                            top: 4px;
+                            padding-top: 20px;
+                            border-top: 1px solid rgba(115, 117, 117, 0.3);
+                            height: 37px;
+                            line-height: 37px;
+                            
+                            &:hover {
+                                background: none;
+                                color: @color;
+                            }
+                            
+                            span {
+                                height: 37px;
+                                width: 269px;
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+        
+        .navbar-toggle {
+            display: block;
+            padding: 0px;
+            width: 34px;
+            height: 31px;
+            margin: 26px 0px 0px;
+            
+            .icon-bar {
+                background: @color;
+                border-radius: 5px;
+                width: 100%;
+                height: 5px;
+                
+                +.icon-bar {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+
+    /* ======= Home Section ======= */
+    .home {
+        height: 627px;
+        
+        .home-content{
+            background-position: center 152px;
+            background-size: auto 126px;
+        }
+    
+        .title {
+            font-size: 32px;
+            line-height: 36px;
+            margin-top: 38px;
+            margin-bottom: 206px;
+        }
+        
+        p {
+            font-size: 17px;
+            line-height: 26px;
+            font-weight: 200;
+            margin-bottom: 33px;
+        }
+        
+        .scroll {
+            display: none;
+        }
+    }
+    
+    /* ======= About Section ======= */
+    .about {
+        .intro {
+            padding: 0 10px;
+        }
+        
+        .about-bottom {
+            .intro {
+                font-size: 14px;
+                line-height: 21px;
+                max-width: 100%;
+                padding: 0px 10px;
+                text-align: center;
+                margin-bottom: 23px;
+            }
+            
+            p {
+                display: block;
+                
+                &.button {
+                    float: none;
+                }
+                
+                .btn {
+                    margin: 0px auto;
+                    width: 166px;
+                
+                    span {
+                        width: 166px;
+                        height: 54px;
+                    }
+                    
+                }
+            }
+        }
+        
+        .item {
+            margin: 32px 0px 0px;
+            
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            
+            .icon-holder {
+                height: 60px;
+                width: 60px;
+                position: relative;
+                left: 0px;
+                margin: 0 auto;
+                border-radius: 26px;
+            }
+            
+            .content {
+                padding: 25px 20px 0px;
+                text-align: center;
+            }
+        }
+        
+        .about-middle {
+            background: @color;
+            padding-bottom: 30px;
+            
+        }
+        
+        .owl-buttons {
+            display: none;
+        }
+	
+    }
+    
+    /* ======= Track Section ======= */
+    .track {
+        .intro{
+            font-size: 17px;
+        }
+        
+        .title {
+            margin-bottom: 32px;
+        }
+        
+        .row {
+            margin: 64px 0px 46px;
+            
+            .item {
+                padding-top: 12px;
+                
+                p {
+                    margin-bottom: 16px;
+                }
+                
+                &.pad {
+                    padding-top: 28px;
+                    
+                    p {
+                        margin-bottom: 23px;
+                    }
+                }
+            }
+            
+            .borderB {
+                border-bottom: 1px solid @line-gray;
+            }
+            
+            .borderR {
+                border-right: 1px solid @line-gray;
+                background: none;
+            }
+            
+            .borderN {
+                border-right: none;
+            }
+        }
+      
+    }
+    
+    /* ======= Contact Section ======= */
+    .contact {
+        padding: 0px;
+        margin: 0px;
+        height: 553px;
+        position: relative;
+        right: 0px;
+        
+        .content-form {
+            width: 320px;
+            border: 10px solid rgba(42, 170, 224, 0.2);
+            padding: 0px;
+            float: none;
+            margin: 0px auto 0;
+        }
+        
+        .content-form {
+            .input-group {
+                width: 260px;
+                margin: 10px 0px 0px 20px;
+            }
+            
+            .contact-form {
+                .btn {
+                    width: 260px;    
+                }
+            }
+        }
+        
+    }
+    
+}

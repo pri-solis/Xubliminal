@@ -1,0 +1,130 @@
+@import "main.less";
+
+/* Small devices (tablets, 724px to 939px) */
+@media (min-width: 724px) and (max-device-width: 939px) {
+   
+    /* ======= Home Section ======= */
+    .home {
+        height: 786px;
+        .scroll {
+            display: none;
+        }
+    }
+    
+    /* ======= About Section ======= */
+    .about {
+        .about-middle {
+            background: linear-gradient(to bottom,  @color 0%, @color 33%, @color-gray 34%, @color-gray 66%,  @color 67%, @color 100%);
+        }
+        
+        .about-bottom {
+            
+            .btn {
+                width: 166px;
+                
+                span {
+                    width: 166px;
+                    height: 54px;
+                }
+            }
+            
+            .bg-img {
+                padding-bottom: 25px;
+                
+                .intro {
+                    line-height: 21px;
+                }
+            }
+        }
+        
+        .item {
+            .icon-holder {
+                height: 60px;
+                width: 60px;
+                border-radius: 26px;
+            }
+            
+            &.clear-lg {
+                clear: none;
+            }
+            
+            &.clear-md {
+                clear: left;
+            }
+            
+            .content {
+                padding-left: 95px;
+                
+                .sub-title {
+                
+                    &.top-less {
+                        margin-top: 27px;
+                    }
+                }
+            }
+        }
+    }  
+    
+    /* ======= Track Section ======= */
+    .track {
+        .row {
+            .item {
+                p {
+                    font-size: 16px;
+                }
+            }   
+        }
+    }
+}
+
+/* Medium devices (desktops, 940px and up) */
+@media (min-width: 940px) and (max-device-width: 1169px){
+    
+    /* ======= Header Section ======= */
+    .header {
+        .logo {
+            a {
+                .logo-title {
+                    background-size: 190px 27px;
+                }
+            }
+        }
+    
+    }
+    
+    /* ======= Home Section ======= */
+    .home {
+        background: url("../images/bg_home.jpg") center 85px no-repeat;
+        height: 881px;
+    }
+    
+    .about {
+        .about-bottom {
+            .intro {
+                max-width: 77%;
+            }
+            
+            .btn {
+                width: 199px;
+                
+                span {
+                    width: 199px;
+                    height: 54px;
+                }
+            }
+        }
+        .item {
+            .icon-holder {
+                height: 60px;
+                width: 60px;
+            }
+            
+            .content {
+                padding-left: 95px;
+            }
+        }
+    }
+
+}
+
+
