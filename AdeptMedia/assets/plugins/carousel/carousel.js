@@ -308,9 +308,16 @@ if (typeof Object.create !== "function") {
         },
 
         appendWrapperSizes : function () {
-            var base = this,
-                width = base.$owlItems.length * base.itemWidth;
+            var base = this, width;
 
+            width = base.$owlItems.length * base.itemWidth;
+
+            $(window).on('resize', function(){
+                if ($(window).width() <= 723) {  
+                    width = base.itemWidth;
+                }
+            });
+                
             base.$owlWrapper.css({
                 "width": width * 2,
                 "left": 0
@@ -738,9 +745,17 @@ if (typeof Object.create !== "function") {
         },
 
         doTranslate : function (pixels) {
+            
             if ($(window).width() > 723) {  
                 pixels = 0;
             }
+
+            $(window).on('resize', function(){
+                if ($(window).width() > 723) {  
+                    pixels = 0;
+                }
+            });
+
             return {
                 "-webkit-transform": "translate3d(" + pixels + "px, 0px, 0px)",
                 "-moz-transform": "translate3d(" + pixels + "px, 0px, 0px)",
@@ -936,9 +951,21 @@ if (typeof Object.create !== "function") {
                 locals.offsetX = getTouches(ev).x - position.left;
                 locals.offsetY = getTouches(ev).y - position.top;
 
-                if ($(window).width() <= 723) {  
-                    swapEvents("on");
-                }
+
+                    if ($(window).width() <= 723) {  
+                        swapEvents("on");
+                    }else {
+                        swapEvents("off");
+                    }
+
+                $(window).on('resize', function(){
+                    if ($(window).width() <= 723) {  
+                        swapEvents("on");
+                    }else {
+                        swapEvents("off");
+                    }
+                });
+                
 
                 locals.sliding = false;
                 locals.targetElement = ev.target || ev.srcElement;
