@@ -1,14 +1,20 @@
 @import "main.less";
 
 /* Medium devices (desktops, 940px and up) */
-@media (min-width: 940px) and (max-device-width: 1169px){
+@media (max-device-width: 1169px){
+    
+    .container {
+        max-width: 1169px;
+        width: 100%;
+    }
     
     /* ======= Header Section ======= */
     .header {
         .logo {
             a {
-                .logo-title {
-                    background-size: 190px 27px;
+                image {
+                    width: 190px;
+                    height: 27px;
                 }
             }
         }
@@ -16,7 +22,6 @@
     
     /* ======= Home Section ======= */
     .home {
-        background: url("../images/bg_home.jpg") center 85px no-repeat;
         height: 881px;
     }
     

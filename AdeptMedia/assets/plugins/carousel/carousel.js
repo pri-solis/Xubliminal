@@ -1,5 +1,3 @@
-if ($(window).width() <= 723) {  
-    // is mobile device
 if (typeof Object.create !== "function") {
     Object.create = function (obj) {
         function F() {}
@@ -138,7 +136,7 @@ if (typeof Object.create !== "function") {
             }
             base.watchVisibility();
             base.updateItems();
-            base.calculateAll();
+            base.calculateAll(); 
             base.updatePosition();
             base.updateControls();
             base.eachMoveUpdate();
@@ -740,6 +738,9 @@ if (typeof Object.create !== "function") {
         },
 
         doTranslate : function (pixels) {
+            if ($(window).width() > 723) {  
+                pixels = 0;
+            }
             return {
                 "-webkit-transform": "translate3d(" + pixels + "px, 0px, 0px)",
                 "-moz-transform": "translate3d(" + pixels + "px, 0px, 0px)",
@@ -747,6 +748,7 @@ if (typeof Object.create !== "function") {
                 "-ms-transform": "translate3d(" + pixels + "px, 0px, 0px)",
                 "transform": "translate3d(" + pixels + "px, 0px,0px)"
             };
+
         },
 
         transition3d : function (value) {
@@ -934,7 +936,9 @@ if (typeof Object.create !== "function") {
                 locals.offsetX = getTouches(ev).x - position.left;
                 locals.offsetY = getTouches(ev).y - position.top;
 
-                swapEvents("on");
+                if ($(window).width() <= 723) {  
+                    swapEvents("on");
+                }
 
                 locals.sliding = false;
                 locals.targetElement = ev.target || ev.srcElement;
@@ -1498,7 +1502,3 @@ if (typeof Object.create !== "function") {
         afterLazyLoad: false
     };
 }(jQuery, window, document));      
-
-} 
-
-

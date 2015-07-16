@@ -1,8 +1,13 @@
 @import "main.less";
 
 /* Small devices (tablets, 724px to 939px) */
-@media (min-width: 724px) and (max-device-width: 939px) {
-   
+@media (max-device-width: 939px) {
+    
+    .container {
+        max-width: 939px;
+        width: 100%;
+    }
+    
     /* ======= Home Section ======= */
     .home {
         height: 786px;
@@ -84,18 +89,13 @@
     .header {
         .logo {
             a {
-                .logo-title {
-                    background-size: 190px 27px;
+                image {
+                    width: 190px;
+                    height: 27px;
                 }
             }
         }
     
-    }
-    
-    /* ======= Home Section ======= */
-    .home {
-        background: url("../images/bg_home.jpg") center 85px no-repeat;
-        height: 881px;
     }
     
     .about {

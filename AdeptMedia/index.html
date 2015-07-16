@@ -27,6 +27,12 @@
         var mapOptions = {
           center: new google.maps.LatLng(44.5403, -78.5463),
           zoom: 8,
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          draggable: false,
+          disableDefaultUI: true,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions)
@@ -62,7 +68,7 @@
         <div class="container">            
             <h1 class="logo pull-left">
                 <a class="scrollto" href="#home">
-                    <span class="logo-title">AdeptMedia</span>
+                    <image id="animationSandbox" class="fadeInDown animated" src="assets/images/AdeptMedia_logo.png" alt="AdeptMedia" title="AdeptMedia"/>
                 </a>
             </h1><!--//logo-->     
             <a href="#" class="btn drop-shadow login-desk" role="button"><span class="text-uppercase">Login</span></a>         
@@ -78,9 +84,9 @@
                     <ul class="nav navbar-nav">
                         <li class="active nav-item"><a class="scrollto text-uppercase" href="#home">Home</a></li>
                         <li class="nav-item"><a class="scrollto text-uppercase" href="#about">About Adept</a></li>
-                        <li class="nav-item"><a class="scrollto text-uppercase" href="#track">Track Record</a></li>
-                        <li class="nav-item"><a class="scrollto text-uppercase" href="#">Blog</a></li>                        
-                        <li class="nav-item last"><a class="scrollto text-uppercase" href="#contact-map">Contact Us</a></li>
+                        <li class="nav-item"><a class="scrollto text-uppercase" href="#track">Track Record</a></li>           
+                        <li class="nav-item"><a class="scrollto text-uppercase" href="#contact">Contact Us</a></li>
+                        <li class="nav-item last"><a class="scrollto text-uppercase" href="#">Blog</a></li>             
                         <li class="nav-item login-mobile"><a href="#" class="btn drop-shadow" role="button"><span class="text-uppercase">Login</span></a> </li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
@@ -97,8 +103,8 @@
                         Advertising Network</h2>
                     <p class="text-center">We are an invitation­ only advertising network specializing in content locking and incentivized advertising</p>
                     <a href="#" class="btn drop-shadow" role="button"><span class="text-uppercase">Request Invite</span><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></a>
-                    <img class="scroll" src="assets/images/scroll.png" width="24" height="41">
-                    <span class="scroll text-scroll text-uppercase">scroll down</span>
+                    <a class="scrollto scroll img-scroll text-uppercase" href="#about"><span class="sprite"></span></a>
+                    <a class="scrollto scroll text-scroll text-uppercase" href="#about">scroll down</a>
                 </div><!--//container-->
             </div>
         </div>
@@ -117,42 +123,42 @@
             <div class="container">
                 <div id="carousel" class="row owl-carousel owl-theme">
                     <div class="item col-md-4 col-sm-6 col-xs-12">
-                        <div class="icon-holder item1"></div>
+                        <div class="icon-holder item1"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase">Strongest Campaigns</h3>
                             <p>Access the highest&#173;converting, highest&#173;paying&nbsp;campaigns in the industry. Our hand­picked, high&#173;quality affiliate base enables us to perform like no other network can.</p>
                         </div><!--//content-->
                     </div><!--//item-->
                     <div class="item col-md-4 col-sm-6 col-xs-12">
-                        <div class="icon-holder item2"></div>
+                        <div class="icon-holder item2"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase">Global reach</h3>
                             <p>We have campaigns that span the entire globe, ensuring you never miss an opportunity to monetize a visitor.</p>
                         </div><!--//content-->
                     </div><!--//item-->
                     <div class="item col-md-4 col-sm-6 col-xs-12 clear-md">
-                        <div class="icon-holder item3"></div>
+                        <div class="icon-holder item3"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase">Intelligent Platform</h3>
                             <p class="top-space">Our intelligent algorithms analyze your traffic&nbsp;patterns using cutting­edge statistical learning techniques to automatically optimize your revenue.</p>
                         </div><!--//content-->
                     </div><!--//item-->             
                     <div class="item col-md-4 col-sm-6 col-xs-12 clear-lg">
-                        <div class="icon-holder item4"></div>
+                        <div class="icon-holder item4"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase top-less">Content locking</h3>
                             <p>Our platform supports all types of content locking, including on­page widgets, file locking, link locking, video locking, and offer&nbsp;walls.</p>
                         </div><!--//content-->
                     </div><!--//item-->              
                     <div class="item col-md-4 col-sm-6 col-xs-12 clear-md">
-                        <div class="icon-holder item5"></div>
+                        <div class="icon-holder item5"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase top-less">Experienced Team</h3>
                             <p>Our team has over 30 years of collective experience in incentivized content locking. We provide helpful, friendly support whenever you need it.</p>
                         </div><!--//content-->
                     </div><!--//item-->
                     <div class="item col-md-4 col-sm-6 col-xs-12">
-                        <div class="icon-holder item6"></div>
+                        <div class="icon-holder item6"><span class="sprite"></span></div>
                         <div class="content">
                             <h3 class="sub-title text-uppercase top-less">Reliable, Timely Payments</h3>
                             <p>We support net30, biweekly, and weekly payments, depending on volume. Our significant financial backing ensures that our payments are always on­time and worry­free.</p>
@@ -178,23 +184,23 @@
             <p class="intro text-center">Our team has been involved in incentive marketing since its inception. Our collective experience amounts to:</p>    
             <div class="row">
                     <div class="item borderR col-md-3 col-sm-3 col-xs-6">
-                        <img src="assets/images/icon_click.png" width="81" height="81">
+                        <span class="sprite item1"></span>
                         <h3 class="sub-title text-green">2bn</h3>
                         <p>Total Clicks</p>
                     </div><!--//item-->
                     <div class="item borderR borderN col-md-3 col-sm-3 col-xs-6">
-                        <img src="assets/images/icon_leads.png" width="81" height="81">
+                        <span class="sprite item2"></span>
                         <h3 class="sub-title text-blue">30mm</h3>
                         <p>Total Leads</p>
                     </div><!--//item-->
                     <div class="clearfix visible-xs borderB"></div>
-                    <div class="item borderR pad col-md-3 col-sm-3 col-xs-6">
-                        <img src="assets/images/icon_money.png" width="81" height="81">
+                    <div class="item borderR col-md-3 col-sm-3 col-xs-6">
+                        <span class="sprite item3"></span>
                         <h3 class="sub-title text-orange">$2mm</h3>
                         <p>Payments Sent</p>
                     </div><!--//item-->
                     <div class="item col-md-3 pad col-sm-3 col-xs-6">
-                        <img src="assets/images/icon_experience.png" width="81" height="81">
+                        <span class="sprite item4"></span>
                         <h3 class="sub-title text-yellow">30 years</h3>
                         <p>Collective Experience</p>
                     </div><!--//item-->
@@ -206,29 +212,29 @@
         <div class="bg-top"></div>
         <div id="google-map" class="google-map"></div>
         <!-- ******CONTACT****** --> 
-        <section id="contact" class="contact section has-pattern">
-            <div class="container">
+        <section class="contact section has-pattern">
+            <div id="contact" class="container">
                 <div class="content-form">
                     <form class="form-inline contact-form">
                         <h3 class="title">Get in touch</h3>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">Name</label>
                             <div class="input-group active">
-                                <div class="input-group-addon name-icon"></div>
+                                <div class="input-group-addon name-icon"><span class="sprite"></span></div>
                                 <input type="text" class="form-control name-field" placeholder="Name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">E-mail</label>
                             <div class="input-group">
-                                <div class="input-group-addon mail-icon"></div>
+                                <div class="input-group-addon mail-icon"><span class="sprite"></span></div>
                                 <input type="email" class="form-control mail-field" placeholder="E-mail">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">Message</label>
                             <div class="input-group">
-                                <div class="input-group-addon msg-icon"></div>
+                                <div class="input-group-addon msg-icon"><span class="sprite"></span></div>
                                 <textarea class="form-control msg-field" rows="3" placeholder="Message"></textarea>
                             </div>
                         </div>
@@ -253,7 +259,6 @@
     <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>  
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
- 
     <script type="text/javascript" src="assets/plugins/carousel/carousel.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>      
 </body>
