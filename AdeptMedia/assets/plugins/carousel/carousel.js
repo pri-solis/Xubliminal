@@ -310,16 +310,25 @@ if (typeof Object.create !== "function") {
         appendWrapperSizes : function () {
             var base = this, width;
 
-            width = base.$owlItems.length * base.itemWidth;
+            if ($(window).width() > 724) {  
+                width = base.itemWidth;
+            }else {
+                width = base.$owlItems.length * base.itemWidth;
+                    width = width * 2;
+            }
 
             $(window).on('resize', function(){
-                if ($(window).width() <= 723) {  
+                if ($(window).width() > 724) {  
                     width = base.itemWidth;
+                }else {
+                    width = base.$owlItems.length * base.itemWidth;
+                    width = width * 2;
                 }
+                return width;
             });
                 
             base.$owlWrapper.css({
-                "width": width * 2,
+                "width": width,
                 "left": 0
             });
             base.appendItemsSizes();
@@ -746,12 +755,12 @@ if (typeof Object.create !== "function") {
 
         doTranslate : function (pixels) {
             
-            if ($(window).width() > 723) {  
+            if ($(window).width() > 724) {  
                 pixels = 0;
             }
 
             $(window).on('resize', function(){
-                if ($(window).width() > 723) {  
+                if ($(window).width() > 724) {  
                     pixels = 0;
                 }
             });

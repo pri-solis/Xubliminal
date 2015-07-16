@@ -1,5 +1,5 @@
 
-@media (max-device-width: 723px) { 
+@media (max-width: 723px) { 
 	/* clearfix */
 	.owl-carousel .owl-wrapper:after {
 		content: ".";
