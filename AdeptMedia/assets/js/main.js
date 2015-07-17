@@ -1,4 +1,4 @@
-function testAnim(fade) {
+function testAnim() {
 
     $('#animationSandbox').animate({
         width: "195px",
@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
     $('a.scrollto').on('click', function(e){
 
         
-        testAnim('fadeInDown');
+        testAnim();
         //store hash
         var target = this.hash;
                 
@@ -60,6 +60,63 @@ jQuery(document).ready(function($) {
    
     });
 
+     //Firefox
+     $('body').bind('DOMMouseScroll', function(e){
+         if(e.originalEvent.detail > 0) {
+             //scroll down
+              shake();
+         }else {
+             //scroll up
+              shake();
+         }
+
+         //prevent page fom scrolling
+         return true;
+     });
+
+     //IE, Opera, Safari
+     $('body').bind('mousewheel', function(e){
+         if(e.originalEvent.wheelDelta < 0) {
+             //scroll down
+              shake();
+         }else {
+             //scroll up
+              shake();
+         }
+
+         //prevent page fom scrolling
+         return true;
+     });
+
+    function shake () {
+        $('#shake').removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass();
+        });
+    };
 
 
+});
+
+$(window).load(function(){
+
+    'use strict';
+
+
+    //ANIMATED ITEMS
+        $('.animated').appear(function() {
+            var item = $(this);
+            var animation = item.data('animation');
+            if ( !item.hasClass('visible') ) {
+                var animationDelay = item.data('animation-delay');
+                if ( animationDelay ) {
+                    setTimeout(function(){
+                        item.addClass( animation + " visible" );
+                    }, animationDelay);
+                } else {
+                    item.addClass( animation + " visible" );
+                }
+            }
+        });
+
+// End Window Load Function
 });
